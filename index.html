@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инфографика о Беларуси</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 20rem; 
+            max-height: 400px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 22rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    
+    <header class="h-screen min-h-[500px] bg-cover bg-center flex items-center justify-center text-white text-center px-4" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg');">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">Belarus: A Discovery in the Heart of Europe</h1>
+            <p class="text-2xl md:text-3xl font-light">A beautiful country you need to see.</p>
+        </div>
+    </header>
+
+    
+    <main class="container mx-auto px-6 py-16 md:py-24 space-y-20">
+
+        
+        <section id="location" class="text-center">
+            <h2 class="text-4xl font-bold text-[#073B4C] mb-4">Where is Belarus?</h2>
+            <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-12">
+                Belarus is a welcoming green country right in the center of Europe. It's a peaceful land of beautiful forests and quiet rivers, sharing borders with five other nations. This central location gives it a unique blend of cultures and landscapes.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <p class="text-8xl font-bold text-[#118AB2]">5</p>
+                    <p class="text-2xl font-semibold mt-2 mb-4">Neighboring Countries</p>
+                    <ul class="text-lg space-y-1">
+                        <li>Poland</li>
+                        <li>Ukraine</li>
+                        <li>Russia</li>
+                        <li>Lithuania</li>
+                        <li>Latvia</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg h-full">
+                    <img src="https://cdn.britannica.com/93/183593-050-9C3CD06D/World-Data-Locator-Map-Belarus.jpg" alt="Карта мира с выделенной Беларусью" class="w-full h-full object-contain p-4">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="nature">
+            <h2 class="text-4xl font-bold text-center text-[#073B4C] mb-4">Land of Blue Lakes & Green Forests</h2>
+            <p class="max-w-3xl mx-auto text-lg text-center leading-relaxed mb-12">
+                Often called the "lungs of Europe," Belarus is blessed with incredible nature. Its vast, ancient forests and thousands of clear lakes create a stunning landscape. It's also a sanctuary for rare wildlife, including the majestic European bison.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center h-full flex flex-col justify-center">
+                    <img src="https://cdnstatic.rg.ru/resize800x533/uploads/images/photogallery/2020/02/20/b4a471ab831a6a1/b4a471ab831a6a11582218676.jpg" alt="Европейский зубр" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <p class="text-2xl font-semibold mb-2">Home of the European Bison</p>
+                    <p class="text-lg">One of the last places on Earth to see this big and rare animal in its natural habitat, the ancient Belovezhskaya Pushcha forest. In Belarus, we call him "Zubr," and he is a mighty hero of many national legends.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center h-full">
+                    <p class="text-2xl font-semibold mb-4">A Land of Water and Woods</p>
+                    <div class="chart-container">
+                        <canvas id="forestChart"></canvas>
+                    </div>
+                    <p class="text-lg mt-4">With over 11,000 lakes and vast forests covering about 40% of the country, nature is always close by.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="history">
+            <h2 class="text-4xl font-bold text-center text-[#073B4C] mb-4">Travel to the Past: Old Castles</h2>
+            <p class="max-w-3xl mx-auto text-lg text-center leading-relaxed mb-12">
+                Belarus has a rich and deep history waiting to be explored. You can visit amazing old castles that look like they are from a fairy tale. Two of its most famous castles are so important they are protected as UNESCO World Heritage sites.
+            </p>
+            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="absolute h-full w-1 bg-[#FFD166] left-1/2 -translate-x-1/2 hidden md:block"></div>
+                <div class="bg-white p-6 rounded-xl shadow-lg flex items-center space-x-4">
+                    <img src="https://news.cgtn.com/news/2023-03-02/Mir-Castle-Temple-of-Heaven-serve-as-cultural-icons-1hQyYwnCI8w/img/6ae6ca48d7e74947b31b69d2b1fc7d3f/6ae6ca48d7e74947b31b69d2b1fc7d3f.jpeg" alt="Мирский замок" class="w-24 h-24 rounded-lg object-cover">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#118AB2]">Mir Castle</h3>
+                        <p class="text-md">A stunning example of 16th-century fortification art, blending Gothic, Baroque, and Renaissance architecture.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg flex items-center space-x-4">
+                    <img src="https://unesco.ru/wp-content/uploads/2020/11/42-9-2.jpg" alt="Несвижский дворец" class="w-24 h-24 rounded-lg object-cover">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#118AB2]">Nesvizh Palace</h3>
+                        <p class="text-md">An incredible residential castle of the Radziwill family, surrounded by beautiful parks and lakes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="culture">
+            <h2 class="text-4xl font-bold text-center text-[#073B4C] mb-4">Talented People, Tasty Food</h2>
+            <p class="max-w-3xl mx-auto text-lg text-center leading-relaxed mb-12">
+                The heart of Belarus is its friendly and hospitable people. They are known for their beautiful traditional crafts and, of course, their delicious national food. A visit isn't complete without trying the famous "draniki"!
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://img.freepik.com/premium-photo/colorful-belarusian-national-costume-type-dress-material-linen-color-traditonal-clothes-fashion_1020495-286804.jpg" alt="Белорусский национальный костюм" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-2">Beautiful Crafts</h3>
+                        <p class="text-lg">Belarusians are masters of making beautiful and intricate items from natural materials like linen and straw.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Ukrainian_potato_pancakes.png" alt="Белорусские драники" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-2">Delicious Draniki</h3>
+                        <p class="text-lg">You must try the national dish, "draniki." They are wonderfully tasty potato pancakes, often served with sour cream.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="bg-cover bg-center text-white text-center py-24 px-4" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/14979140/pexels-photo-14979140.jpeg');">
+        <h2 class="text-5xl font-bold mb-4">Welcome to Belarus!</h2>
+        <p class="text-2xl max-w-3xl mx-auto font-light">From the clean, modern streets of its capital city, Minsk, to the quiet, untouched nature, Belarus is a country of wonderful surprises. Thank you for your attention!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const forestCtx = document.getElementById('forestChart').getContext('2d');
+            new Chart(forestCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Forests', 'Other Land'],
+                    datasets: [{
+                        label: 'Land Use',
+                        data: [40, 60],
+                        backgroundColor: [
+                            '#06D6A0', 
+                            '#FFD166'  
+                        ],
+                        borderColor: [
+                            '#ffffff',
+                            '#ffffff'
+                        ],
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: "'Inter', sans-serif"
+                                },
+                                color: '#475569'
+                            }
+                        },
+                        tooltip: {
+                             callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
